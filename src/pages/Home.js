@@ -38,7 +38,7 @@ const Home = () => {
 
     ]
     return (
-        <div className='h-full   md:overflow-y-hidden bg-dark-blue'>
+        <div className='h-full overflow-x-hidden md:overflow-y-hidden bg-dark-blue'>
             <Navbar />
             <div className='h-full p-8 font-Mont' >
                 <div className='  md:flex 	md:p-10 md:relative  md:z-[2]'>
@@ -65,7 +65,7 @@ const Home = () => {
                         </div>
                     </div>
 
-                    <div className='flex-1 grid grid-cols-1 md:grid-cols-3  gap-4 content-center justify-items-center md:justify-items-start  pt-8 md:pt-0'>
+                    <div className='flex-1 grid grid-cols-1 md:grid-cols-3  gap-4 content-center justify-items-center   pt-8 md:pt-0'>
 
                         {data.map((item) => (<div className='bg-gradient-to-r from-[#2B2E32] to-[#23262A] p-4 rounded-md max-w-[90%] hover:cursor-pointer hover:scale-105' >
 
