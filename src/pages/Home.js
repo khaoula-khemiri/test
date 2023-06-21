@@ -1,7 +1,7 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
 import { ArchiveBoxIcon, ChatBubbleOvalLeftEllipsisIcon, CpuChipIcon, EnvelopeIcon, LockClosedIcon, UserGroupIcon } from '@heroicons/react/24/outline';
-
+import { Link } from 'react-router-dom';
 
 const Home = () => {
     const data = [
@@ -59,7 +59,7 @@ const Home = () => {
                                 your needs , and will help you with the sign-up process
                             </div>
                             <div className='flex gap-4'>
-                                <button className='bg-light-blue px-6 py-2 rounded-lg hover:bg-[#588ae8] '>Start Now</button>
+                                <button className='bg-light-blue px-6 py-2 rounded-lg hover:bg-[#588ae8] '><Link to="/table">Start Now</Link></button>
                                 <button className='border-2 border-light-blue px-4 py-2 rounded-lg hover:bg-light-gray'>Contact Sales</button>
                             </div>
                         </div>
@@ -67,23 +67,24 @@ const Home = () => {
 
                     <div className='flex-1 grid grid-cols-1 md:grid-cols-3  gap-4 content-center justify-items-center   pt-8 md:pt-0'>
 
-                        {data.map((item) => (<div className='bg-gradient-to-r from-[#2B2E32] to-[#23262A] p-4 rounded-md max-w-[90%] hover:cursor-pointer hover:scale-105' >
+                        {data.map((item) =>
+                        (<Link to="/table">
+                            <div className='bg-gradient-to-r from-[#2B2E32] to-[#23262A] p-4 rounded-md max-w-[90%] hover:cursor-pointer hover:scale-105' >
 
-                            <div className='w-12 h-12 bg-[#292E36] p-2 rounded-full text-light-blue '>
-                                {item.icon}
-                            </div>
-                            <div className='text-white'>
-                                <div className='font-medium py-2 text-[12px]'>
-                                    {item.title}
+                                <div className='w-12 h-12 bg-[#292E36] p-2 rounded-full text-light-blue '>
+                                    {item.icon}
                                 </div>
+                                <div className='text-white'>
+                                    <div className='font-medium py-2 text-[12px]'>
+                                        {item.title}
+                                    </div>
 
-                                <p className='text-[10px]'>
-                                    {item.desc}
-                                </p>
+                                    <p className='text-[10px]'>
+                                        {item.desc}
+                                    </p>
+                                </div>
                             </div>
-
-
-                        </div>))}
+                        </Link>))}
 
 
                     </div>
