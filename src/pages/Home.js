@@ -38,10 +38,10 @@ const Home = () => {
 
     ]
     return (
-        <div className='h-full   md:overflow-y-hidden bg-dark-blue md:relative  md:z-[-2]'>
+        <div className='h-full   md:overflow-y-hidden bg-dark-blue'>
             <Navbar />
-            <div className='h-full 	p-8 font-Mont md:relative  md:z-[-2]' >
-                <div className='  md:flex items-center justify-center	md:p-10 '>
+            <div className='h-full ' >
+                <div className='  md:flex items-center justify-center	md:p-10 md:relative  md:z-[2]'>
                     <div className="flex-1  flex items-center justify-center">
                         <div className='text-white flex   flex-col gap-y-4 md:max-w-sm '>
 
@@ -70,7 +70,7 @@ const Home = () => {
                         {data.map((item) => (<div className='bg-gradient-to-r from-[#2B2E32] to-[#23262A] p-4 rounded-xl max-w-[90%]' >
 
                             <div className='w-12 h-12 bg-[#292E36] p-2 rounded-full text-light-blue '>
-                                {/* <UsersIcon /> */}
+
                                 {item.icon}
                             </div>
                             <div className='text-white'>
@@ -91,10 +91,10 @@ const Home = () => {
 
                 </div>
 
-                <div className='hidden sm:block absolute z-[-1] bottom-[56%] left-[5%] right-[5%] bg-light-blue p-10  h-[100px] rounded-bl-full rounded-tr-full' >
+                <div className='hidden sm:block absolute z-[1] bottom-[56%] left-[5%] right-[5%] bg-light-blue p-10  h-[100px] rounded-bl-full rounded-tr-full' >
                 </div>
 
-                <div className='hidden sm:block absolute z-[-1] bottom-[28%] left-[45%] right-[5%] bg-light-blue p-10  h-[100px] rounded-bl-full rounded-br-full' >
+                <div className='hidden sm:block absolute z-[1] bottom-[28%] left-[45%] right-[5%] bg-light-blue p-10  h-[100px] rounded-bl-full rounded-br-full' >
                 </div>
             </div>
         </div>
